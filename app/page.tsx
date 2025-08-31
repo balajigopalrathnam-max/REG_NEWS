@@ -1,3 +1,7 @@
+// Force Node runtime & dynamic render (don’t pre-render at build)
+export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
+
 import { fetchAllNews, fetchLikelyFines } from '../lib/rss';
 import keyDates from '../data/key-dates.json';
 import fintech from '../data/fintech.json';
@@ -14,7 +18,7 @@ export default async function Page() {
       <section id="intro" className="bg-white rounded-2xl border p-5">
         <h1 className="text-2xl font-semibold">Your daily regulatory reporting desk</h1>
         <p className="text-sm text-gray-600 mt-1">
-          Live feeds from FCA, SEC, and CFTC + curated dates & vendor radar. Use this as a starter and extend with ESMA, MAS, ASIC and your firm’s sources.
+          Live feeds from FCA, SEC, and CFTC + curated dates & vendor radar.
         </p>
       </section>
 
@@ -43,7 +47,7 @@ export default async function Page() {
 
       <section id="fines" className="bg-white rounded-2xl border">
         <div className="flex items-center justify-between px-5 py-4 border-b">
-          <h2 className="text-lg font-semibold">Latest Fines & Enforcement (auto‑detected)</h2>
+          <h2 className="text-lg font-semibold">Latest Fines & Enforcement (auto-detected)</h2>
           <span className="text-sm text-gray-500">{fines.length} items</span>
         </div>
         <div className="overflow-x-auto p-5 pt-0">
@@ -86,7 +90,9 @@ export default async function Page() {
               </div>
               <div>
                 <div className="font-medium">{k.title}</div>
-                <div className="text-xs text-gray-600"><Badge>{k.region}</Badge><Badge>{k.product}</Badge> <a className="underline underline-offset-4" href={k.link} target="_blank">Details</a></div>
+                <div className="text-xs text-gray-600">
+                  <Badge>{k.region}</Badge><Badge>{k.product}</Badge> <a className="underline underline-offset-4" href={k.link} target="_blank">Details</a>
+                </div>
               </div>
             </li>
           ))}
