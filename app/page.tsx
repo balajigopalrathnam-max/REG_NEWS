@@ -3,8 +3,8 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 import { fetchAllNews, fetchLikelyFines } from '../lib/rss';
-import keyDates from '../data/key-dates.json';
-import fintech from '../data/fintech.json';
+import keyDates from '../data/key-dates';
+import fintech from '../data/fintech';
 
 function Badge({ children }: { children: React.ReactNode }) {
   return <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs bg-gray-100 border border-gray-200 mr-2">{children}</span>;
