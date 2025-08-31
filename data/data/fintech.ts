@@ -1,0 +1,10 @@
+export default [
+  { name: 'Broadridge',  category: 'Reporting Platform', blurb: 'Eligibility, validation, multi-jurisdiction TR.', regions: ['Global'], url: 'https://www.broadridge.com/' },
+  { name: 'UnaVista',    category: 'ARM/TR',            blurb: 'Approved Reporting Mechanism & TR.',           regions: ['UK','EU'], url: 'https://www.lseg.com/' },
+  { name: 'DTCC GTR',    category: 'Trade Repository',  blurb: 'Global Trade Repository connectivity.',        regions: ['US','EU','APAC'], url: 'https://www.dtcc.com/' },
+  { name: 'KOR Financial', category: 'Digital TR',      blurb: 'Modern data exchange & TR services.',          regions: ['US','EU'], url: 'https://www.korfinancial.com/' },
+  { name: 'Snowflake',   category: 'Data Cloud',        blurb: 'Scalable storage for lineage & MI.',           regions: ['Global'], url: 'https://www.snowflake.com/' },
+  { name: 'Databricks',  category: 'Lakehouse',         blurb: 'ML & governance for detection.',               regions: ['Global'], url: 'https://www.databricks.com/' },
+  { name: 'ServiceNow',  category: 'Workflow',          blurb: 'Issues, incidents & remediation.',             regions: ['Global'], url: 'https://www.servicenow.com/' },
+  { name: 'Alteryx',     category: 'No-code Data',      blurb: 'Rapid pipelines for controls & recs.',         regions: ['Global'], url: 'https://www.alteryx.com/' }
+] as const;
