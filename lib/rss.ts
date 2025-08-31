@@ -1,3 +1,4 @@
+import 'server-only';
 import Parser from 'rss-parser';
 import { FEEDS } from './feeds';
 import { NewsItem, FineItem } from './types';
